@@ -24,7 +24,7 @@ with KBs using the generated SQL queries. Specifically, the neural agent first l
 * torchtext 0.4.0
 
 ## 1. Prepare Dataset
-The download of the AirDialogue dataset, meta data and the pre-processing steps can refer to the [official link](https://github.com/google/airdialogue_model/blob/master/README.md). Since the official pre-processing code and steps may have some little changes, you can also download from the URL provided [here](https://drive.google.com/file/d/1jn6q5g7n4Dv_q2BhMs7j5pbQje91fSaZ/view?usp=sharing). The pre-processing steps are the same as provided by the official, but the older version.
+The download of the AirDialogue dataset, meta data and the pre-processing steps can refer to the [official link](https://github.com/google/airdialogue_model). Since the official pre-processing code and steps may have some little changes, you can also download from the URL provided [here](https://drive.google.com/file/d/1jn6q5g7n4Dv_q2BhMs7j5pbQje91fSaZ/view?usp=sharing). The pre-processing steps are the same as provided by the official, but the older version.
 	bash ./scripts/download.sh
 
 ## 2. Training
