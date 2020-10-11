@@ -56,6 +56,7 @@ If you find this work useful in your research, please cite:
 chen2020airconcierge,
 title={AirConcierge: Generating Task-Oriented Dialogue via Efficient Large-Scale Knowledge Retrieval},
 author={Chieh-Yang Chen and Pei-Hsin Wang and Shih-Chieh Chang and Da-Cheng Juan and Wei Wei and Jia-Yu Pan},
+booktitle = {Findings of EMNLP 2020},
 year={2020}
 }
 ```
