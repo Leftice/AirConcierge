@@ -62,3 +62,78 @@ If you find this work useful in your research, please cite:
 
 ## Acknowledgement
 The implementation of seq2seq model is adapted from the [pytorch-seq2seq](https://github.com/IBM/pytorch-seq2seq) repository by [IBM](https://github.com/IBM). The code implementation of text-to-SQL refers to [SQLNet](https://github.com/xiaojunxu/SQLNet) repository by [xiaojunxu](https://github.com/xiaojunxu)
+
+<!-- --data
+	--airdialogue
+		--tokenized
+			--vocab.txt
+			
+			--train
+				--train.data
+				--train_new.kb
+			--dev
+				--dev.train
+				--dev.kb
+
+			--infer
+				--dev.infer.src.data
+				--dev.infer.tar.data
+				--dev.infer.kb
+			
+			--selg_play_eval
+				--dev.selfplay.eval.data
+				--dev.selfplay.eval.kb
+		--SQL
+			--dev
+				--filtered_kb
+				--State_Tracking.txt
+				--train_tok.jsonl
+				--train_tok.tables.jsonl
+
+			--dev_self_play_eval
+				--train_tok.jsonl
+				--train_tok.tables.jsonl
+
+			--train
+				--filtered_kb
+				--State_Tracking.txt
+				--train_tok.jsonl
+				--train_tok.tables.jsonl
+
+	--synthesized
+		--json
+		--tokenized
+			--vocab.txt
+
+			--train.data
+			--train.kb
+
+			--dev.eval.data
+			--dev.eval.kb
+
+			--dev.infer.src.data
+			--dev.infer.tar.data
+			--dev.infer.kb
+
+			--dev.selfplay.eval.data
+			--dev.selfplay.eval.kb
+	
+		--SQL
+			--dev
+				--filtered_kb
+				--State_Tracking.txt
+				--train_tok.jsonl
+				--train_tok.tables.jsonl
+
+			--dev_self_play_eval
+				--filtered_kb
+				--State_Tracking.txt
+				--train_tok.jsonl
+				--train_tok.tables.jsonl
+				
+			--train
+				--filtered_kb
+				--State_Tracking.txt
+				--train_tok.jsonl
+				--train_tok.tables.jsonl
+			-- -->

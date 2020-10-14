@@ -1,0 +1,235 @@
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'hi', '.'], ['<t2>', 'Hello', '.'], ['<t1>', 'I', 'am', 'Matthew', 'Young', '.'], ['<t2>', 'What', 'can', 'I', 'do', 'for', 'you', '?'], ['<t1>', 'I', 'want', 'to', 'cancel', 'my', 'recent', 'reservation', ',', 'because', 'I', 'want', 'to', 'travel', 'with', 'my', 'friends', 'by', 'road', '.', 'Can', 'you', 'help', 'me', '?'], ['<t2>', 'Sure', 'Matthew', 'Young', ',', 'please', 'hold', 'on', '.'], ['<t1>', 'Ok', '.'], ['<t2>', 'Sorry', 'to', 'inform', 'you', 'that', ',', 'currently', 'no', 'flights', 'are', 'running', 'at', 'that', 'locations', 'due', 'to', 'abnormal', 'weather', 'conditions', '.'], ['<t1>', 'That', "'s", 'Ok', ',', 'thanks', 'for', 'your', 'response', '.'], ['<t2>', 'Thank', 'you', 'for', 'reaching', 'us', ',', 'have', 'a', 'nice', 'day', '.', '<eod>']]
+Error : 2503
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', '.', 'How', 'may', 'I', 'assist', 'you', '?'], ['<t1>', 'I', 'am', 'planning', 'to', 'cancel', 'my', 'recent', 'reservation', ',', 'due', 'to', 'health', 'issue', '.', 'Can', 'you', 'please', 'help', 'me', 'out', '?'], ['<t2>', 'Sure', ',', 'I', 'am', 'here', 'to', 'help', 'you', 'out', '.'], ['<t1>', 'My', 'name', 'is', 'Benjamin', 'Davis', '.', 'Thank', 'you', '.'], ['<t2>', 'May', 'I', 'know', 'your', 'name', 'please', '?', 'We', 'have', "n't", 'found', 'nay', 'reservation', 'under', 'your', 'name', 'in', 'our', 'database', '.'], ['<t1>', 'That', "'s", 'fine', ',', 'thank', 'you', 'for', 'your', 'service', '.'], ['<t2>', 'Thank', 'you', 'for', 'reaching', 'us', '.', '<eod>']]
+Error : 11991
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', ',', 'I', 'was', 'sent', 'here', 'from', 'your', 'website', 'to', 'help', 'me', 'cancel', 'my', 'reservation', '.'], ['<t2>', 'Hello', ',', 'you', "'ve", 'come', 'to', 'the', 'right', 'place', '!', '.', 'What', 'is', 'your', 'name', '?'], ['<t1>', 'My', 'name', 'is', 'Thomas', 'Young', ',', 'and', 'I', 'suppose', 'the', 'reservation', 'was', 'done', 'under', 'the', 'same', 'name', '.'], ['<t2>', 'Ah', ',', 'Mr.', 'Young', ',', 'it', 'seems', 'the', 'reservation', 'has', 'already', 'been', 'canceled', '.'], ['<t1>', 'Oh', 'is', 'it', '?', 'My', 'mother', 'might', 'have', 'done', 'that', 'and', 'forgotten', 'to', 'tell', 'me', '.', 'Anyways', ',', 'I', "'m", 'sorry', 'to', 'bother', 'you', 'about', 'it', '.'], ['<t2>', 'Oh', ',', 'no', 'need', 'to', 'apologize', '!', '.', 'We', 'hope', 'you', 'have', 'a', 'good', 'day', '!', '.'], ['<t1>', 'You', 'have', 'a', 'good', 'day', 'too', '.', '<eod>']]
+Error : 14693
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', '.', 'How', 'may', 'I', 'assist', 'you', 'today', '?'], ['<t1>', 'I', 'want', 'to', 'spend', 'some', 'more', 'days', 'with', 'my', 'family', 'members', ',', 'I', 'want', 'to', 'cancel', 'my', 'recent', 'reservation', '.'], ['<t2>', 'Good', 'to', 'hear', 'that', '.', 'I', 'will', 'help', 'you', 'for', 'that', '.', 'I', 'did', 'not', 'find', 'any', 'reservation', 'with', 'your', 'name', '.', 'May', 'I', 'know', 'your', 'name', '?'], ['<t1>', 'Myself', 'Brenda', 'Robinson', '.'], ['<t2>', 'Robinson', ',', 'thank', 'you', 'for', 'reaching', 'us', '.'], ['<t1>', 'Thank', 'you', 'for', 'your', 'help', '.', '<eod>']]
+Error : 14743
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', ',', 'how', 'may', 'I', 'help', 'you', '?'], ['<t1>', 'My', 'name', 'is', 'Paul', 'Carter', '.'], ['<t2>', 'Nice', 'to', 'meet', 'you', ',', 'Paul', '.'], ['<t1>', 'I', 'want', 'to', 'cancel', 'my', 'recent', 'reservation', 'due', 'to', 'my', 'cricket', 'match', 'has', 'been', 'postponed', '.'], ['<t2>', 'Would', 'you', 'like', 'me', 'to', 'do', 'cancellation', 'for', 'you', '?'], ['<t1>', 'Yes', '.'], ['<t2>', 'Ok', '.', 'Please', 'wait', 'a', 'minute', '.'], ['<t1>', 'Sure', '.'], ['<t2>', 'Mr.', 'Paul', ',', 'your', 'ticket', 'is', 'cancelled', 'successful', '.'], ['<t1>', 'Thanks', 'for', 'your', 'help', '.', '<eod>']]
+Error : 20721
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', '.'], ['<t2>', 'Hello', '.', 'How', 'may', 'I', 'help', 'you', '?'], ['<t1>', 'I', 'want', 'to', 'cancel', 'my', 'reservation', 'due', 'to', 'health', 'problem', ',', 'can', 'you', 'help', 'me', '?'], ['<t2>', 'Ok', ',', 'I', 'can', 'help', 'you', 'with', 'it', '.', 'Can', 'you', 'share', 'your', 'previous', 'name', 'of', 'reservation', '?'], ['<t1>', 'I', 'am', 'Patricia', 'Jones', '.'], ['<t2>', 'Sorry', 'Patricia', 'Jones', ',', 'I', 'could', "n't", 'find', 'any', 'reservation', 'under', 'your', 'name', '.', 'Can', 'I', 'help', 'you', 'regarding', 'other', 'information', ',', 'let', 'me', 'know', '?'], ['<t1>', 'No', 'problem', ',', 'thanks', 'for', 'checking', '.'], ['<t2>', 'Thank', 'you', 'for', 'consulting', 'our', 'agency', '.', 'Have', 'a', 'great', 'day', '.'], ['<t1>', 'Welcome', '.', '<eod>']]
+Error : 25238
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', '.'], ['<t1>', 'I', 'am', 'Dorothy', 'Baker', '.'], ['<t2>', 'How', 'can', 'I', 'assist', 'you', '?'], ['<t1>', 'Due', 'to', 'some', 'health', 'issue', 'I', 'want', 'to', 'cancel', 'my', 'trip', '.', 'Can', 'you', 'please', 'help', 'me', '?'], ['<t2>', 'Dorothy', 'Baker', ',', 'that', "'s", 'sad.What', 'can', 'I', 'do', 'for', 'you', '?'], ['<t1>', 'As', 'I', 'said', 'before', 'I', 'want', 'to', 'cancel', 'my', 'reservation', '.'], ['<t2>', 'Sure', ',', 'let', 'me', 'check', 'with', 'your', 'existing', 'reservation', '.'], ['<t1>', 'Ok', '.'], ['<t2>', 'Thanks', 'for', 'reaching', 'us', '.', 'Take', 'care', 'of', 'your', 'health', '.', '<eod>']]
+Error : 27580
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', ',', 'Charles', 'Gonzalez', 'here', '.'], ['<t2>', 'Hello', ',', 'How', 'may', 'we', 'assist', 'you', 'today', '?'], ['<t1>', 'I', 'recently', 'reserved', 'a', 'ticket', 'to', 'give', 'a', 'visit', 'to', 'my', 'best', 'friend', '.', 'But', ',', 'before', 'my', 'journey', 'he', 'came', 'to', 'my', 'home', 'and', 'gave', 'me', 'a', 'surprise', 'visit', '.', 'So', ',', 'now', 'I', 'want', 'that', 'ticket', 'to', 'be', 'cancelled', '.', 'Can', 'you', 'please', 'help', 'me', '?'], ['<t2>', 'OK', ',', 'could', 'you', 'please', 'hold', 'on', 'for', 'a', 'minute', '.'], ['<t1>', 'Sure', '.'], ['<t2>', 'Thank', 'you', 'for', 'waiting', ',', 'we', 'did', 'not', 'find', 'any', 'flights', '.'], ['<t1>', 'OK', ',', 'no', 'problem', '.', 'Thanks', 'for', 'your', 'information', '.', '<eod>']]
+Error : 30024
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', '.'], ['<t2>', 'Hello', '.'], ['<t1>', 'Myself', 'Jack', 'Collins', '.'], ['<t2>', 'How', 'may', 'I', 'help', 'you', ',', 'Collins', '?'], ['<t1>', 'Can', 'you', 'please', 'cancel', 'my', 'reservation', 'as', 'I', 'have', 'no', 'interest', 'to', 'travel', 'for', 'those', 'locations', '?'], ['<t2>', 'Sure', 'Collins', '.', 'Please', 'hold', 'on', 'a', 'minute', '.', 'Jack', ',', 'your', 'reservation', 'is', 'cancelled', 'successfully', '.'], ['<t1>', 'Thank', 'you', 'so', 'much', '.'], ['<t2>', 'Thank', 'you', 'for', 'reaching', 'us', '.', '<eod>']]
+Error : 33137
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', '.', 'How', 'can', 'I', 'assist', 'you', '?'], ['<t1>', 'Due', 'to', 'heavy', 'snowfall', 'at', 'my', 'location', ',', 'I', 'just', 'want', 'to', 'cancel', 'my', 'recent', 'reservation', '.', 'Please', 'help', 'me', 'out', '.'], ['<t2>', 'Sure', '.', 'May', 'I', 'know', 'on', 'whose', 'name', 'you', 'have', 'made', 'the', 'reservation', '?'], ['<t1>', 'Please', 'check', 'the', 'reservation', 'on', 'the', 'name', 'of', 'Anthony', 'Gonzalez', '.'], ['<t2>', 'Anthony', ',', 'your', 'reservation', 'has', 'been', 'cancelled', 'successfully', '.'], ['<t1>', 'Thank', 'you', 'for', 'your', 'information', '.'], ['<t2>', 'Thank', 'you', 'for', 'using', 'our', 'services', '.', '<eod>']]
+Error : 38351
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', ',', 'how', 'may', 'I', 'help', 'you', '?'], ['<t1>', 'I', 'am', 'Rachel', 'Roberts', ',', 'want', 'to', 'cancel', 'my', 'reservation', '.', 'Please', 'help', 'me', 'out', 'with', 'that', '.'], ['<t2>', 'Your', 'ticket', 'is', 'cancelled', 'successfully', '.'], ['<t1>', 'Thank', 'you', '.'], ['<t2>', 'Welcome', '.', '<eod>']]
+Error : 55582
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', ',', 'how', 'may', 'I', 'assist', 'you', '?'], ['<t1>', 'Ronald', 'Edwards', 'this', 'side', ',', 'can', 'you', 'help', 'me', 'to', 'cancel', 'my', 'ticket', ',', 'there', 'is', 'some', 'financial', 'issue', 'going', 'on', 'with', 'my', 'family', '.'], ['<t2>', 'Sure', ',', 'hold', 'for', 'a', 'moment', '.', 'Sorry', 'Ronald', ',', 'there', 'are', 'no', 'flight', 'tickets', 'reserved', 'under', 'your', 'name', '.'], ['<t1>', 'Ok', ',', 'no', 'issues', ',', 'I', 'just', 'now', 'got', 'the', 'message', 'that', 'my', 'ticket', 'is', 'cancelled', ',', 'thank', 'you', '.'], ['<t2>', 'Thank', 'you', 'for', 'reaching', 'us', '.'], ['<t1>', 'Welcome', '.'], ['<t2>', 'Have', 'a', 'good', 'day', '.', '<eod>']]
+Error : 56122
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', ',', 'I', 'am', 'Betty', 'Martin', '.'], ['<t2>', 'Hello', ',', 'how', 'can', 'I', 'assist', 'you', '?'], ['<t1>', 'I', 'need', 'to', 'cancel', 'my', 'recent', 'reservation', ',', 'as', 'my', 'appointment', 'with', 'my', 'doctor', 'got', 'cancelled', '.', 'Please', 'help', 'me', 'in', 'cancelling', '?'], ['<t2>', 'Sure', ',', 'please', 'wait', 'a', 'moment', '.'], ['<t1>', 'Ok.', 'Ok', ',', 'no', 'issues', 'Thank', 'you', '.'], ['<t2>', 'Thank', 'you', '.', '<eod>']]
+Error : 65410
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', ',', '.'], ['<t2>', 'Hello', '.', 'How', 'may', 'I', 'render', 'you', 'today', '?'], ['<t1>', 'My', 'meeting', 'got', 'postponed', 'as', 'of', 'now', ',', 'so', 'I', 'need', 'to', 'cancel', 'my', 'recent', 'reservation', '.', 'Can', 'you', 'assist', 'me', '?'], ['<t2>', 'OK.', 'Sure', ',', 'I', 'will', 'assist', 'you', ',', 'May', 'I', 'have', 'your', 'name', '?'], ['<t1>', 'I', 'am', 'Brian', 'Smith', '.'], ['<t2>', 'Please', 'wait', '.'], ['<t1>', 'Ok', '.'], ['<t2>', 'Thanks', 'for', 'waiting', '.', 'No', 'reservation', 'done', 'before', 'to', 'proceed', '.'], ['<t1>', 'Not', 'a', 'problem', '.'], ['<t2>', 'Thank', 'you', 'for', 'reaching', 'us', ',', 'Have', 'a', 'nice', 'day', '.'], ['<t1>', 'Thank', 'you', '.', '<eod>']]
+Error : 71958
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', '.', 'May', 'I', 'know', 'who', 'is', 'this', '?'], ['<t1>', 'I', "'m", 'Nancy', 'Johnson', '.'], ['<t2>', 'How', 'can', 'I', 'assist', 'you', '?'], ['<t1>', 'Due', 'to', 'a', 'sudden', 'meeting', ',', 'I', 'want', 'to', 'cancel', 'my', 'reservation', '.', 'Would', 'you', 'help', 'me', 'out', '?'], ['<t2>', 'Sure', ',', 'I', 'will', 'help', 'you', '.', 'But', 'Nancy', 'Johnson', 'there', 'are', 'no', 'flights', 'on', 'your', 'name', '.'], ['<t1>', 'That', "'s", 'great', '.'], ['<t2>', 'Thank', 'you', 'for', 'reaching', 'us', '.'], ['<t1>', 'Thank', 'you', 'for', 'helping', 'me', '.'], ['<t2>', 'Have', 'a', 'great', 'day', 'a', 'head', '.', '<eod>']]
+Error : 80839
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', ',', 'how', 'can', 'I', 'serve', 'you', '?'], ['<t1>', 'I', 'am', 'Deborah', 'Wright', '.', 'I', 'am', 'planning', 'to', 'cancel', 'my', 'recent', 'reservation', ',', 'because', 'of', 'health', 'issue.Can', 'you', 'please', 'cancel', 'my', 'reservation', '?'], ['<t2>', 'Ok', ',', 'give', 'me', 'a', 'moment', 'please', 'to', 'check', 'existing', 'reservation', '.', 'Yes', ',', 'Wright', 'I', 'do', 'not', 'find', 'any', 'reservation', 'under', 'your', 'name', 'in', 'our', 'data', 'base', 'to', 'cancel', '.'], ['<t1>', 'That', "'s", 'really', 'sad', 'to', 'hear', '.'], ['<t2>', 'Do', 'you', 'have', 'any', 'other', 'requirements', '?'], ['<t1>', 'I', 'will', 'cancel', 'my', 'reservation', 'any', 'other', 'agency.Thank', 'you', 'for', 'your', 'service', ',', '.'], ['<t2>', 'Ok', ',', 'thank', 'you', 'for', 'choosing', 'our', 'service', '.', 'Hope', 'you', 'have', 'a', 'great', 'day', 'ahead', '.', '<eod>']]
+Error : 83926
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', '.', 'How', 'can', 'I', 'help', 'you', '?'], ['<t1>', 'I', 'booked', 'a', 'ticket', 'to', 'see', 'the', 'sports', 'match', '.', 'But', ',', 'the', 'plan', 'got', 'canceled', '.', 'I', 'want', 'to', 'cancel', 'my', 'recent', 'booking', '?'], ['<t2>', 'Ok', ',', 'please', 'provide', 'me', 'your', 'name', '?'], ['<t1>', 'My', 'name', 'is', 'Karen', 'Adams', '.'], ['<t2>', 'Sad', 'to', 'inform', 'you', 'that', 'we', 'do', "n't", 'have', 'any', 'bookings', 'by', 'your', 'name', '.'], ['<t1>', 'Ok', ',', 'no', 'problem', ',', 'anyways', 'thank', 'you', 'for', 'providing', 'information', '.'], ['<t2>', 'Thanks', 'for', 'contacting', 'us', '.', '<eod>']]
+Error : 86934
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', '.'], ['<t2>', 'Hello', '.'], ['<t1>', 'I', 'am', 'Linda', 'Turner', '.'], ['<t2>', 'How', 'may', 'I', 'assist', 'you', '?'], ['<t1>', 'I', 'want', 'to', 'cancel', 'my', 'reservation', ',', 'can', 'you', 'help', 'me', 'with', 'that', '?'], ['<t2>', 'Sure', ',', 'I', 'am', 'here', 'to', 'help', 'you', 'out', '.'], ['<t1>', 'Thank', 'you', '.'], ['<t2>', 'Wait', 'a', 'moment', 'please', '.'], ['<t1>', 'Sure', '.'], ['<t2>', 'Linda', 'Turner', ',', 'there', 'are', 'no', 'flights', 'available', 'in', 'your', 'route', '.'], ['<t1>', 'Ok', '.'], ['<t2>', 'Thank', 'you', 'for', 'choosing', 'us', '.'], ['<t1>', 'Thank', 'you', '.', '<eod>']]
+Error : 109621
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t2>', 'Hello', '.'], ['<t1>', 'Hello', '.'], ['<t2>', 'How', 'may', 'I', 'help', 'you', '?'], ['<t1>', 'I', 'am', 'Joseph', 'Perez', ',', 'want', 'to', 'cancel', 'my', 'recent', 'reservation', '.'], ['<t2>', 'It', "'s", 'ok', ',', 'thank', 'you', '.'], ['<t1>', 'Most', 'welcome', '.', '<eod>']]
+Error : 112817
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', '.'], ['<t2>', 'Hello', '.', 'How', 'can', 'I', 'help', 'you', '?'], ['<t1>', 'Unfortunately', ',', 'I', 'would', 'like', 'to', 'cancel', 'my', 'reservation', 'which', 'is', 'done', 'recently', ',', 'can', 'you', 'please', 'help', 'me', 'in', 'this', '?'], ['<t2>', 'Sure', ',', 'wait', 'a', 'while', '.', 'There', 'is', 'on', 'reservation', 'on', 'your', 'name', 'in', 'our', 'database', '.'], ['<t1>', 'Ok', ',', 'no', 'problem', '.'], ['<t2>', 'May', 'I', 'know', 'your', 'name', 'please', '?'], ['<t1>', 'My', 'name', 'is', 'Debra', 'Hernandez', '.'], ['<t2>', 'Thank', 'you', 'for', 'opting', 'us', '.'], ['<t1>', 'Thank', 'you', 'for', 'your', 'appreciable', 'service', '.', '<eod>']]
+Error : 120646
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', ',', 'how', 'can', 'I', 'help', 'you', '?'], ['<t1>', 'I', 'am', 'Ashley', 'Evans', '.', 'I', 'planned', 'to', 'visit', 'the', 'Vinayaka', 'temple', 'on', '07/22', ',', 'but', 'heavy', 'rainfall', 'in', 'our', 'city', ',', 'so', 'we', 'cancelled', '.', 'Could', 'you', 'please', 'help', 'me', '?'], ['<t2>', 'Sure', ',', 'please', 'let', 'me', 'check', 'with', 'the', 'status', '.'], ['<t1>', 'Sure', '.'], ['<t2>', 'You', 'have', 'not', 'done', 'any', 'reservation', 'earlier', '.'], ['<t1>', 'Ok', ',', 'thank', 'you', 'for', 'your', 'information', '.'], ['<t2>', 'Have', 'a', 'good', 'day', '.', '<eod>']]
+Error : 128438
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', '.', 'I', 'had', 'previously', 'made', 'a', 'reservation', ',', 'but', 'something', 'has', 'come', 'up', '.', 'Would', 'I', 'be', 'able', 'to', 'cancel', 'it', '?'], ['<t2>', 'Yes', ',', 'we', 'can', 'do', 'that', '.', 'May', 'I', 'know', 'under', 'what', 'name', 'it', 'was', 'done', '?'], ['<t1>', 'Anthony', 'Carter', '.'], ['<t2>', 'Mr.', 'Carter', ',', 'it', 'seems', 'your', 'reservation', 'has', 'been', 'cancelled', 'already', '3', 'hours', 'ago', '.', 'Is', 'there', 'anything', 'else', 'we', 'can', 'help', 'you', 'with', '?'], ['<t1>', 'No', 'that', 'was', 'all', '.', 'Thank', 'you', 'for', 'your', 'help', '.'], ['<t2>', 'Please', 'reach', 'out', 'to', 'us', 'for', 'any', 'other', 'questions', '.', 'Have', 'a', 'nice', 'day', ',', '.', '<eod>']]
+Error : 129035
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.', 'I', "'m", 'Brenda', 'Wilson', '.'], ['<t2>', 'Hello', ',', 'Brenda', 'Wilson', '.', 'How', 'can', 'I', 'help', 'you', '?'], ['<t1>', 'I', 'want', 'to', 'cancel', 'my', 'reservation', ',', 'Can', 'you', 'help', 'me', 'out', '?'], ['<t2>', 'Sure', '.', 'Unfortunately', ',', 'there', 'are', 'no', 'flights', 'on', 'your', 'name', 'Brenda', 'Wilson', '.'], ['<t1>', 'It', "'s", 'fine', '.'], ['<t2>', 'Thank', 'you', 'for', 'reaching', 'us', '.'], ['<t1>', 'Thank', 'you', 'for', 'your', 'immediate', 'response', '.', '<eod>']]
+Error : 129437
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', '.', 'Myself', 'Debra', 'Allen', '.'], ['<t2>', 'Hello', 'Allen', '.', 'How', 'can', 'I', 'help', 'you', 'today', '?'], ['<t1>', 'For', 'some', 'personal', 'issues', 'I', 'want', 'to', 'cancel', 'my', 'reservation', ',', 'can', 'you', 'please', 'help', 'me', '?'], ['<t2>', 'Sure', '.', 'Allen', ',', 'I', 'did', 'not', 'found', 'any', 'reservation', 'with', 'your', 'name', '.'], ['<t1>', 'It', "'s", 'ok', '.'], ['<t2>', 'Anything', 'else', 'to', 'help', 'you', '.'], ['<t1>', 'Thank', 'you', 'for', 'the', 'information', '.'], ['<t2>', 'It', "'s", 'my', 'pleasure', 'Debra', 'Allen', '.', '<eod>']]
+Error : 138167
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.', 'I', 'am', 'Alexander', 'Lopez', '.'], ['<t2>', 'Hello', 'Alexander', 'Lopez', '.', 'How', 'may', 'I', 'assist', 'you', '?'], ['<t1>', 'Due', 'to', 'an', 'emergency', 'health', 'issue', ',', 'I', 'am', 'not', 'able', 'to', 'attend', 'for', 'the', 'function', '.', 'Can', 'you', 'assist', 'me', 'with', 'that', '?'], ['<t2>', 'Sure', ',', 'let', 'me', 'know', 'your', 'details', '?'], ['<t1>', 'Can', 'you', 'please', 'cancel', 'my', 'recent', 'reservation', '.'], ['<t2>', 'Ok', '.', 'Your', 'recent', 'reservation', 'has', 'been', 'canceled', '.'], ['<t1>', 'Thank', 'you', '.'], ['<t2>', 'Thank', 'you', '.', '<eod>']]
+Error : 139689
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', ',', 'myself', 'Janet', 'Perez', '.'], ['<t2>', 'Hello', '.', 'Howe', 'can', 'I', 'assist', 'you', 'at', 'this', 'moment', '?'], ['<t1>', 'I', 'want', 'to', 'cancel', 'my', 'recent', 'reservation', ',', 'can', 'you', 'please', 'help', 'me', 'out', '?'], ['<t2>', 'Sure', 'Janet', 'Perez', ',', 'I', 'am', 'happy', 'to', 'help', 'you', 'with', 'that', '.'], ['<t1>', 'Thank', 'you', '.'], ['<t2>', 'Was', 'the', 'ticket', 'booked', 'under', 'the', 'name', 'which', 'you', 'have', 'provided', 'now', '?'], ['<t1>', 'Yes', '.'], ['<t2>', 'Ok', 'Janet', 'Perez', ',', 'I', 'have', 'checked', 'in', 'our', 'database', 'but', 'I', 'am', 'unable', 'to', 'find', 'your', 'reservation', '.'], ['<t1>', 'It', "'s", 'ok', ',', 'thank', 'you', '.'], ['<t2>', 'Thank', 'you', 'for', 'choosing', 'us', ',', 'have', 'a', 'good', 'day', '.', '<eod>']]
+Error : 142554
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', '.', 'How', 'may', 'I', 'help', 'you', '?'], ['<t1>', 'I', 'want', 'to', 'cancel', 'my', 'flight', 'as', 'my', 'exams', 'are', 'postponed', '.'], ['<t2>', 'Ok', ',', 'may', 'I', 'know', 'your', 'name', 'please', 'to', 'check', 'the', 'status', '?'], ['<t1>', 'I', "'m", 'Ryan', 'Campbell', '.'], ['<t2>', 'Your', 'reservation', 'is', 'cancelled', ',', 'Ryan', '.'], ['<t1>', 'Ok', ',', 'thanks', 'for', 'helping', 'me', '.'], ['<t2>', 'Thank', 'you', 'for', 'reaching', 'us', '.'], ['<t1>', 'You', 'are', 'welcome', '.', '<eod>']]
+Error : 143936
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', ',', 'what', 'would', 'I', 'do', 'for', 'you', '?'], ['<t1>', 'I', 'want', 'to', 'cancel', 'my', 'recent', 'reservation', '.'], ['<t2>', 'May', 'I', 'know', 'your', 'name', 'check', 'connection', 'is', 'present', 'or', 'not', '?'], ['<t1>', 'Myself', 'Stephanie', 'Carter', '.'], ['<t2>', 'Stephanie', 'Carter', 'no', 'connections', 'under', 'your', 'name', '.'], ['<t1>', 'It', "'s", 'Ok', '.', 'Thank', 'you', 'for', 'your', 'services', '.'], ['<t2>', 'Thank', 'you', 'for', 'reaching', 'us', '.', '<eod>']]
+Error : 148147
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', ',', 'I', 'need', 'to', 'cancel', 'a', 'reservation', 'that', 'I', 'made', 'recently', '.'], ['<t2>', 'I', 'can', 'help', 'you', 'with', 'that', '.', 'What', 'is', 'the', 'name', 'under', 'the', 'reservation', '?'], ['<t1>', 'Oh', 'I', 'think', 'it', 'was', 'done', 'under', 'my', 'name', '.', 'Barbara', 'Smith', '.'], ['<t2>', 'It', 'appears', 'that', 'your', 'flight', 'has', 'already', 'been', 'canceled', '.', 'Is', 'there', 'anything', 'else', 'that', 'I', 'can', 'help', 'you', 'with', 'today', '?'], ['<t1>', 'Thank', 'god', 'it', 'was', 'already', 'cancelled', '.', 'I', 'thought', 'I', 'lost', 'my', 'chance', 'on', 'refund', '.', 'I', 'think', 'that', 'is', 'it', 'for', 'today', '.', 'Thank', 'you', 'so', 'much', 'for', 'checking', 'that', 'out', 'for', 'me', '.'], ['<t2>', 'Your', 'welcome', '.', 'If', 'you', 'have', 'not', 'yet', 'received', 'your', 'refund', ',', 'it', 'should', 'be', 'credited', 'to', 'the', 'original', 'payment', 'method', 'within', 'the', 'next', '5', 'business', 'days', '.', 'Thank', 'you', 'and', 'have', 'a', 'nice', 'day', '.'], ['<t1>', 'You', 'too', 'have', 'a', 'nice', 'day', '.', '<eod>']]
+Error : 148923
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.', 'Jacob', 'King', 'here', '.'], ['<t2>', 'Hello', ',', 'how', 'can', 'I', 'assist', 'you', 'Jacob', '?'], ['<t1>', 'I', 'have', 'to', 'cancel', 'my', 'reservation', ',', 'which', 'I', 'have', 'done', 'earlier', 'to', 'participate', 'in', 'dance', 'program', ',', 'but', 'unfortunately', 'I', 'have', 'stayed', 'back', 'here', 'to', 'take', 'care', 'of', 'my', 'injured', 'friend', '.'], ['<t2>', 'Please', 'give', 'me', 'a', 'moment', '.'], ['<t1>', 'Ok', '.'], ['<t2>', 'Your', 'reservation', 'has', 'been', 'cancelled', '.'], ['<t1>', 'Thank', 'you', 'for', 'your', 'help', '.'], ['<t2>', 'Thank', 'you', 'for', 'approaching', 'us', '.'], ['<t1>', 'Welcome', '.', '<eod>']]
+Error : 162658
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', ',', 'how', 'may', 'I', 'help', 'you', '?'], ['<t1>', 'Actually', 'I', 'planned', 'for', 'the', 'trip', ',', 'but', 'unfortunately', 'I', 'am', 'cancelled', 'that', ',', 'so', 'please', 'help', 'me', 'to', 'cancel', 'my', 'recent', 'reservation', '.'], ['<t2>', 'Sure', ',', 'I', 'will', 'help', 'you', 'with', 'that', '.', 'We', 'sorry', 'to', 'inform', 'you', 'that', ',', 'we', 'did', 'not', 'find', 'any', 'reservation', 'with', 'your', 'name', '.', 'May', 'I', 'know', 'your', 'good', 'name', 'please', '?'], ['<t1>', 'My', 'name', 'is', 'Nancy', 'Carter', '.', 'It', "'s", 'ok', ',', 'thank', 'you', 'for', 'the', 'information', '.'], ['<t2>', 'Thank', 'you', 'for', 'contacting', 'us', '.', 'Have', 'a', 'great', 'day', '.'], ['<t1>', 'You', 'are', 'welcome', '.', '<eod>']]
+Error : 165235
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', ',', 'I', 'am', 'Nicole', 'Parker', '.'], ['<t2>', 'Hello', ',', 'how', 'may', 'I', 'assist', 'you', 'today', '?'], ['<t1>', 'As', 'I', 'am', 'not', 'issued', 'with', 'leave', 'during', 'my', 'journey', 'period', ',', 'so', 'I', 'want', 'to', 'cancel', 'my', 'reservation', '.', 'Can', 'you', 'help', 'me', 'with', 'that', '?'], ['<t2>', 'Sure', ',', 'please', 'wait', 'for', 'a', 'moment', '.'], ['<t1>', 'Ok', '.'], ['<t2>', 'Thanks', 'for', 'waiting', ',', 'we', 'are', 'unable', 'to', 'find', 'your', 'reservation', 'in', 'our', 'data', 'base', '.'], ['<t1>', 'Ok', ',', 'no', 'issues', '.', 'Thanks', 'for', 'your', 'quick', 'response', '.'], ['<t2>', 'Thanks', 'for', 'availing', 'us', '.', '<eod>']]
+Error : 165499
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', ',', 'how', 'can', 'I', 'help', 'you', 'today', '?'], ['<t1>', 'I', "'m", 'Gregory', 'Wright', ',', 'I', 'need', 'your', 'help', 'in', 'cancelling', 'my', 'recent', 'reservation', '.'], ['<t2>', 'Sure', ',', 'our', 'work', 'is', 'to', 'help', 'you', '.', 'Please', 'wait', 'for', 'a', 'while', '.', 'Thank', 'you', 'for', 'waiting', ',', 'there', 'is', 'no', 'ticket', 'booked', 'previously', 'on', 'your', 'name', '.'], ['<t1>', 'No', 'problem', '.', 'Thank', 'you', 'for', 'your', 'response', '.'], ['<t2>', 'Is', 'there', 'any', 'other', 'plan', 'to', 'travel', '?'], ['<t1>', 'No', '.'], ['<t2>', 'Ok', ',', 'have', 'a', 'nice', 'day', ',', 'thank', 'you', 'for', 'communicating', 'with', 'us', '.', '<eod>']]
+Error : 191742
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', '.'], ['<t2>', 'Hello', '.'], ['<t1>', 'I', 'am', 'Larry', 'Johnson', '.'], ['<t2>', 'How', 'may', 'I', 'assistance', 'for', 'you', '?'], ['<t1>', 'Can', 'you', 'help', 'me', 'to', 'cancel', 'my', 'reservation', '?'], ['<t2>', 'Sure', ',', 'I', 'can', 'help', 'you', '.', 'Give', 'me', 'a', 'moment', '.'], ['<t1>', 'Sure', ',', 'please', 'check', 'my', 'details', '.'], ['<t2>', 'Thank', 'you', 'for', 'your', 'patience', ',', 'I', 'am', 'unable', 'to', 'find', 'your', 'reservation', 'in', 'our', 'data', 'base', 'to', 'chancel', 'it', '.'], ['<t1>', 'That', 'is', 'fine', '.', 'Thank', 'you', 'for', 'your', 'time', '.'], ['<t2>', 'Thank', 'you', 'for', 'approaching', 'us', ',', 'have', 'a', 'nice', 'day', '.', '<eod>']]
+Error : 201410
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', ',', 'how', 'can', 'I', 'guide', 'you', '?'], ['<t1>', 'I', 'am', 'Michelle', 'Green', '.', 'Actually', 'I', 'want', 'to', 'cancel', 'my', 'recent', 'reservation', 'due', 'to', 'my', 'dates', 'problem', '.', 'Can', 'you', 'help', 'me', 'out', '?'], ['<t2>', 'Yes', ',', 'sure', '.', 'Sorry', 'Michelle', 'Green', 'there', 'is', 'no', 'reservation', 'under', 'your', 'name', '.'], ['<t1>', 'Please', 'check', '.', 'Oh', '!', 'that', "'s", 'fine', 'for', 'me', '.'], ['<t2>', 'Thank', 'you', 'for', 'such', 'a', 'positive', 'attitude', '.'], ['<t1>', 'Thank', 'you', 'for', 'your', 'help', '.'], ['<t2>', 'It', "'s", 'my', 'pleasure', '.', 'Have', 'a', 'great', 'day', 'a', 'head', '.', '<eod>']]
+Error : 206194
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', '.', 'How', 'may', 'I', 'assist', 'you', '?'], ['<t1>', 'My', 'name', 'is', 'Susan', 'Campbell', '.'], ['<t2>', 'Susan', ',', 'nice', 'to', 'meet', 'you', '.'], ['<t1>', 'As', 'my', 'business', 'trip', 'got', 'cancelled', ',', 'I', 'would', 'like', 'to', 'cancel', 'my', 'reservation', '.'], ['<t2>', 'Sure', ',', 'please', 'give', 'me', 'a', 'minute', 'to', 'check', '.'], ['<t1>', 'Ok', '.'], ['<t2>', 'Do', 'you', 'have', 'any', 'other', 'dates', 'to', 'travel', '?'], ['<t1>', 'No', ',', 'for', 'now', 'I', 'do', "n't", 'have', 'any', 'other', 'plans', '.', 'Thank', 'you', 'for', 'your', 'help', '.'], ['<t2>', 'Ok', '.', 'Thank', 'you', 'for', 'choosing', 'us', '.', '<eod>']]
+Error : 207654
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', '.', 'How', 'may', 'I', 'help', 'you', 'today', '?'], ['<t1>', 'Owing', 'to', 'an', 'emergency', 'as', 'demise', 'of', 'my', 'grandfather', '.', 'I', 'want', 'to', 'cancel', 'my', 'recent', 'reservation', '.'], ['<t2>', 'Ok', ',', 'may', 'I', 'know', 'your', 'name', 'to', 'proceed', 'cancellation', '?'], ['<t1>', 'My', 'name', 'is', 'Virginia', 'Evans', '.'], ['<t2>', 'Ok', ',', 'please', 'hold', 'on', 'a', 'while', '.', 'I', 'will', 'let', 'you', 'know', '.', 'We', 'did', 'not', 'find', 'any', 'reservation', 'on', 'your', 'name', '.'], ['<t1>', 'Ok', ',', 'No', 'problem', '.', 'Thanks', 'for', 'the', 'information', '.'], ['<t2>', 'Thanks', 'for', 'approaching', 'us', ',', 'have', 'a', 'nice', 'day', '.', '<eod>']]
+Error : 215017
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', '.'], ['<t1>', 'Myself', 'Ryan', 'Roberts', '.'], ['<t2>', 'How', 'can', 'I', 'help', 'you', 'today', '?'], ['<t1>', 'Can', 'you', 'please', 'help', 'me', 'to', 'cancel', 'my', 'recent', 'reservation', '?'], ['<t2>', 'Ok', ',', 'Roberts', 'please', 'let', 'me', 'know', 'more', 'details', 'of', 'your', 'travel', '?', 'I', 'did', "n't", 'found', 'any', 'reservation', 'on', 'your', 'name', '.'], ['<t1>', 'Thank', 'you', 'for', 'your', 'help', '.'], ['<t2>', 'Can', 'I', 'help', 'you', 'with', 'anything', 'else', '?'], ['<t1>', 'No', '.'], ['<t2>', 'Thank', 'you', '.', '<eod>']]
+Error : 219692
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', ',', '.', 'I', 'am', 'Jason', 'Mitchell', '.'], ['<t2>', 'Hello', ',', 'Jason', 'Mitchell', '.', 'How', 'can', 'I', 'help', 'you', 'out', '?'], ['<t1>', 'Owing', 'to', 'an', 'emergency', 'I', 'need', 'to', 'cancel', 'my', 'recent', 'reservation', '.'], ['<t2>', 'Ok', '.'], ['<t1>', 'Will', 'you', 'help', 'me', 'in', 'cancelling', 'my', 'reservation', '?'], ['<t2>', 'Sure', ',', 'please', 'wait', 'for', 'a', 'while', ',', 'I', 'will', 'revert', 'to', 'you', '.'], ['<t1>', 'Sure', '.'], ['<t2>', 'Thanks', 'for', 'your', 'time', ',', 'you', 'have', 'no', 'reservation', 'done', 'previously', 'to', 'proceed', 'further', '.'], ['<t1>', 'Ok', ',', 'thank', 'you', 'for', 'sharing', 'your', 'information', '.'], ['<t2>', 'Thank', 'you', 'for', 'opting', 'us', ',', 'Have', 'a', 'nice', 'day', '.', '<eod>']]
+Error : 221192
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', '.'], ['<t2>', 'Hello', ',', '.', 'How', 'can', 'I', 'render', 'you', 'today', '?'], ['<t1>', 'I', 'want', 'to', 'cancel', 'my', 'recent', 'ticket', 'booking', 'due', 'to', 'office', 'work', 'that', 'my', 'manager', 'did', 'not', 'approved', 'my', 'leaves', ',', 'so', 'can', 'you', 'please', 'cancel', 'it', '?'], ['<t2>', 'Sure', ',', 'we', 'are', 'here', 'to', 'assist', 'you', '.'], ['<t1>', 'Thank', 'you', '.'], ['<t2>', 'Can', 'you', 'please', 'specify', 'your', 'name', 'to', 'check', 'with', 'the', 'reservation', 'list', '?'], ['<t1>', 'Sure', ',', 'I', 'did', 'reservation', 'with', 'my', 'name', 'Emily', 'Jackson', '.'], ['<t2>', 'Please', ',', 'wait', 'for', 'a', 'while', '.'], ['<t1>', 'Sure', '.'], ['<t2>', 'I', 'have', 'checked', 'for', 'your', 'reservation', 'but', ',', 'I', 'got', 'to', 'know', 'that', 'you', 'have', 'no', 'reservation', 'done', 'with', 'us', '.'], ['<t1>', 'Ok', '.', 'Thanks', 'for', 'the', 'quick', 'response', '.'], ['<t2>', 'Thank', 'you', 'for', 'opting', 'us', ',', 'have', 'a', 'nice', 'day', '.'], ['<t1>', 'I', 'am', 'glad', 'at', 'your', 'service', '.'], ['<t2>', 'Welcome', '.', '<eod>']]
+Error : 223958
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', ',', 'may', 'I', 'know', 'your', 'name', '?'], ['<t1>', 'I', 'am', 'Patricia', 'Williams', '.'], ['<t2>', 'How', 'can', 'I', 'help', 'you', '?'], ['<t1>', 'Due', 'to', 'health', 'issue', ',', 'I', 'want', 'to', 'cancel', 'my', 'recent', 'reservation', '.', 'Can', 'you', 'help', 'me', 'out', '?', '<eod>']]
+Error : 229327
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hi', '.'], ['<t2>', 'Hello', '.', 'How', 'may', 'I', 'help', 'you', '?'], ['<t1>', 'I', 'want', 'to', 'cancel', 'my', 'reservation', 'due', 'to', 'health', 'issues', ',', 'can', 'you', 'help', 'with', 'this', '?'], ['<t2>', 'May', 'I', 'know', 'your', 'name', 'please', '?'], ['<t1>', 'Thank', 'you', 'for', 'accepting', 'my', 'request', ',', 'I', 'am', 'Janet', 'Thomas', '.'], ['<t2>', 'No', 'reservation', 'as', 'per', 'your', 'preferences', 'at', 'the', 'moment', '.'], ['<t1>', 'That', "'s", 'ok', ',', 'thank', 'you', '.'], ['<t2>', 'Thank', 'you', '.', '<eod>']]
+Error : 236908
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', '.', 'How', 'may', 'I', 'help', 'you', '?'], ['<t1>', 'Myself', 'Rebecca', 'Wilson', ',', 'I', 'need', 'to', 'cancel', 'my', 'recent', 'reservation', ',', 'can', 'you', 'help', 'me', 'today', '?'], ['<t2>', 'Please', 'wait', 'for', 'a', 'moment', '.'], ['<t1>', 'Take', 'your', 'time', '.'], ['<t2>', 'I', 'have', 'successfully', 'cancelled', 'your', 'reservation', 'and', 'the', 'amount', 'will', 'be', 'refunded', 'to', 'you', 'within', '2', 'business', 'days', '.'], ['<t1>', 'Thank', 'you', 'for', 'helping', 'me', 'in', 'cancelling', 'the', 'ticket', '.'], ['<t2>', 'Thank', 'you', 'for', 'reaching', 'us', '.'], ['<t1>', 'You', 'are', 'welcome', '.', '<eod>']]
+Error : 255483
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', ',', 'how', 'may', 'I', 'guide', 'you', '?'], ['<t1>', 'I', 'am', 'Pamela', 'Phillips', '.', 'I', 'would', 'like', 'to', 'cancel', 'my', 'existing', 'reservation', '.', 'Could', 'you', 'please', 'help', '?'], ['<t2>', 'Sure', ',', 'please', 'hold', 'on', 'for', 'a', 'moment', '.'], ['<t1>', 'Yes', ',', 'please', 'proceed', '.'], ['<t2>', 'That', "'s", 'ok', '.'], ['<t1>', 'Ok', ',', 'no', 'problem', '.', 'Thank', 'you', 'for', 'the', 'information', '.'], ['<t2>', 'Thank', 'you', ',', 'have', 'a', 'good', 'day', '.', '<eod>']]
+Error : 272780
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', '.', 'Can', 'I', 'know', 'who', 'is', 'this', '?'], ['<t1>', 'My', 'name', 'is', 'John', 'Young', '.'], ['<t2>', 'Yes', ',', 'John', 'Young', 'how', 'can', 'I', 'assist', 'you', '?'], ['<t1>', 'I', 'want', 'to', 'cancel', 'my', 'recent', 'reservation', ',', 'will', 'you', 'please', 'help', 'me', '?'], ['<t2>', 'Sure', ',', 'John', '.', 'But', ',', 'unfortunately', 'there', 'are', 'no', 'flights', 'on', 'your', 'name', '.'], ['<t1>', 'OK', ',', 'thank', 'you', '.'], ['<t2>', 'Thank', 'you', 'for', 'reaching', 'you', 'John', '.', '<eod>']]
+Error : 273820
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', ',', 'how', 'could', 'I', 'assist', 'you', 'today', '?'], ['<t1>', 'I', 'want', 'to', 'cancel', 'my', 'recent', 'reservation', 'due', 'to', 'the', 'ongoing', 'tornado', 'at', 'my', 'destination', '.', 'Can', 'you', 'please', 'help', 'me', 'in', 'that', '?'], ['<t2>', 'One', 'moment', 'please', ',', 'I', 'will', 'check', 'and', 'get', 'back', 'to', 'you', '.'], ['<t1>', 'Sure', '.'], ['<t2>', 'Unfortunately', ',', 'we', 'did', 'not', 'found', 'any', 'reservation', 'on', 'your', 'given', 'name', '.', 'Can', 'I', 'know', 'your', 'name', 'please', '?'], ['<t1>', 'Rebecca', 'Jackson', 'is', 'my', 'name', '.'], ['<t2>', 'Thank', 'you', 'for', 'choosing', 'us', '.'], ['<t1>', 'Thank', 'you', '.', '<eod>']]
+Error : 277409
+****************************************************************************************************
+****************************************************************************************************
+Goal : cancel Final_state : no_reservation
+[['<t1>', 'Hello', ',', 'is', 'this', 'a', 'booking', 'agency', '?'], ['<t2>', 'Yes', 'it', 'is', '!', 'How', 'may', 'I', 'help', 'you', 'today', '?'], ['<t1>', 'I', 'am', 'Patricia', 'young', '.'], ['<t2>', 'Hi', 'Ms.', 'Young', '!', 'What', 'can', 'I', 'do', 'for', 'you', '?'], ['<t1>', 'I', 'want', 'to', 'cancel', 'my', 'reservation', ',', 'help', 'me', 'in', 'canceling', 'my', 'reservation', '?'], ['<t2>', 'Okay', ',', 'give', 'me', 'one', 'moment', 'while', 'I', 'look', 'that', 'up', '.'], ['<t1>', 'Sure', '.'], ['<t2>', 'It', 'seems', 'your', 'reservation', 'has', 'already', 'been', 'canceled', '.', 'Is', 'there', 'anything', 'else', 'I', 'can', 'help', 'you', 'with', 'today', '?'], ['<t1>', 'That', "'s", 'fine', ',', 'for', 'now', 'I', "'m", 'ok', 'with', 'this', '.'], ['<t2>', 'Okay', ',', 'thanks', 'for', 'calling', 'us', 'and', 'have', 'a', 'nice', 'day', '!', '.'], ['<t1>', 'Thank', 'you', 'for', 'your', 'help', '.', '<eod>']]
+Error : 278612
+****************************************************************************************************
