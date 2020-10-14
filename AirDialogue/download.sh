@@ -13,7 +13,3 @@ wget --load-cookies cookies.txt -O $filename \
      'https://docs.google.com/uc?export=download&id='$fileid'&confirm='$(<confirm.txt)
 
 tar -xzvf data.tar.gz
-
-rm data.tar.gz
-rm confirm.txt
-rm cookies.txt
