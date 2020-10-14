@@ -1,5 +1,0 @@
-****************************************************************************************************
-Goal : change Final_state : no_flight
-[['<t1>', 'Hello', '.'], ['<t2>', 'Hello', ',', 'how', 'may', 'I', 'help', 'you', 'today', '?'], ['<t1>', 'Can', 'you', 'please', 'change', 'my', 'reservation', 'due', 'to', 'bad', 'weather', 'condition', '?'], ['<t2>', 'Sure', ',', 'please', 'wait', 'for', 'a', 'while', '.', 'May', 'I', 'know', 'your', 'name', 'please', '?'], ['<t1>', 'Gary', 'Taylor', 'is', 'my', 'name', '.'], ['<t2>', 'Ok', '.', 'Sorry', 'we', 'did', 'not', 'find', 'any', 'reservation', 'with', 'your', 'name', '.'], ['<t1>', 'Ok', ',', 'no', 'issues', '.', 'Thanks', 'for', 'your', 'service', '.'], ['<t2>', 'Thank', 'you', 'for', 'reaching', 'us', '.', '<eod>']]
-Error : 51784
-****************************************************************************************************
