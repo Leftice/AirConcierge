@@ -219,15 +219,15 @@ class SupervisedSelfPlayEval(object):
                                     sents[i].append(token)
                                     history[i].append(sequence_symbols[s][i])
                                     history_sents[i].append(token)
-
-                        if turn_i == turn_gate[0]:
-                            add_token = ['flight', 'number', 'is', predict_flight_number, '.', '<t1>']
-                            if any('<fl_' in s for s in sents[0]) == False and '<fl_10' in predict_flight_number:
-                                history[i] = history[i][:-1] # pop out <t1>
-                                history_sents[i] = history_sents[i][:-1] # pop out <t1>
-                                for add_s in add_token:
-                                    history[i].append(self.corpus.dictionary.word2idx[add_s])
-                                    history_sents[i].append(add_s)
+                        if args.air:
+                            if turn_i == turn_gate[0]:
+                                add_token = ['flight', 'number', 'is', predict_flight_number, '.', '<t1>']
+                                if any('<fl_' in s for s in sents[0]) == False and '<fl_10' in predict_flight_number:
+                                    history[i] = history[i][:-1] # pop out <t1>
+                                    history_sents[i] = history_sents[i][:-1] # pop out <t1>
+                                    for add_s in add_token:
+                                        history[i].append(self.corpus.dictionary.word2idx[add_s])
+                                        history_sents[i].append(add_s)
 
                         for i in range(b):
                             if '<eod>' in sents[i]:

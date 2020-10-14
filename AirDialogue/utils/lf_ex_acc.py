@@ -36,6 +36,7 @@ if args.dev:
         kb_file =  data_path2 + 'tokenized/dev/dev.eval.kb'
     p_query_file = data_path + 'SQL/dev_sql/dev_simple_predict'
     g_query_file = data_path + 'SQL/dev_sql/dev_simple_ground'
+    log_fp = open(data_path + 'dev_lf_ex_sql.log', 'w')
 else:
     print('Please use --dev !')
     raise
@@ -87,8 +88,11 @@ def tokenize_query(path):
             items = line.split("|")
             gate.append(int(items[0]))
             words = []
-            for word in items[1].split():
-                words.append(int(word))
+            if int(items[0]) == 0:
+                words=[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+            else:
+                for word in items[1].split():
+                    words.append(int(word))
             query.append(words)
     return query, gate
 
@@ -271,6 +275,19 @@ def ACC_collf(g_gate, p_gate, g_query, p_query, ACC_collf_correct, ACC_collf_tot
 
     return ACC_collf_correct, ACC_collf_total
 
+def ACC_valtotal(g_gate, p_gate, g_query, p_query, ACC_vallf_correct, ACC_vallf_total, n):
+    
+    # Just compare two query even gate=0 & query=None
+    if g_gate == 1:
+        for i in range(n):
+            # if g_query[i] == -1 and g_query[i] == p_query[i]: # NONE NONE # 91.95 % | 61
+            #     ACC_vallf_correct += 1
+            if g_query[i] != -1 and g_query[i] == p_query[i]: # 2 9, 1 1 ...
+                ACC_vallf_correct += 1
+            ACC_vallf_total += 1
+
+    return ACC_vallf_correct, ACC_vallf_total
+
 def ACC_val(g_gate, p_gate, g_query, p_query, ACC_val_correct, ACC_val_total):
     
     # Just compare two query even gate=0 & query=None
@@ -286,11 +303,36 @@ def ACC_val(g_gate, p_gate, g_query, p_query, ACC_val_correct, ACC_val_total):
             ACC_val_total[1][i] += 1
 
     # Consider g_gate=1 & g_gate=0 but p_gate=1
-    if g_gate == 1 and p_gate == 0:
-        for i in range(12):
-            if g_query[i] != -1:
-                ACC_val_total[2][i] += 1
-    if g_gate == 1 and p_gate == 1:
+    # if g_gate == 1 and p_gate == 0:
+    #     for i in range(12):
+    #         if g_query[i] != -1:
+    #             ACC_val_total[2][i] += 1
+    # if g_gate == 1 and p_gate == 1:
+    #     # 4 combination : truth(y, y, y, n) predict(w, r, n, y)
+    #     for i in range(12):
+    #         # if g_query[i] != -1: # y
+    #         #     if (p_query[i] != g_query[i]) and p_query[i] != -1: # w
+    #         #         ACC_val_total[2][i] += 1
+    #         #     if p_query[i] == g_query[i]: # r
+    #         #         ACC_val_correct[2][i] += 1
+    #         #         ACC_val_total[2][i] += 1
+    #         #     if p_query[i] == -1: # n
+    #         #         ACC_val_total[2][i] += 1
+    #         # if g_query[i] == -1: # n
+    #         #     if p_query[i] != -1: # y
+    #         #         ACC_val_total[2][i] += 1
+    #         if g_query[i] != -1 or  p_query[i] != -1:
+    #             if p_query[i] == g_query[i]:
+    #                 ACC_val_correct[2][i] += 1
+    #             ACC_val_total[2][i] += 1
+
+    # if g_gate == 0 and p_gate == 1:
+    #     for i in range(12):
+    #         if p_query[i] != -1:
+    #             ACC_val_total[2][i] += 1
+
+    # 
+    if g_gate == 1:
         # 4 combination : truth(y, y, y, n) predict(w, r, n, y)
         for i in range(12):
             # if g_query[i] != -1: # y
@@ -304,15 +346,11 @@ def ACC_val(g_gate, p_gate, g_query, p_query, ACC_val_correct, ACC_val_total):
             # if g_query[i] == -1: # n
             #     if p_query[i] != -1: # y
             #         ACC_val_total[2][i] += 1
-            if g_query[i] != -1 or  p_query[i] != -1:
+            if g_query[i] != -1 or p_query[i] != -1:
                 if p_query[i] == g_query[i]:
                     ACC_val_correct[2][i] += 1
                 ACC_val_total[2][i] += 1
 
-    if g_gate == 0 and p_gate == 1:
-        for i in range(12):
-            if p_query[i] != -1:
-                ACC_val_total[2][i] += 1
     return ACC_val_correct, ACC_val_total
 
 def simulate_DB(sents, kb, p_query, p_gate, g_query, g_gate, condition_num):
@@ -324,6 +362,8 @@ def simulate_DB(sents, kb, p_query, p_gate, g_query, g_gate, condition_num):
     error, error_truth = 0, 0
     ACC_ex_correct = 0
     ACC_ex_total = 0
+    ACC_ex_correct2 = 0
+    ACC_ex_total2 = 0
     ACC_val_correct = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
     ACC_val_total = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
     ACC_lf_correct = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
@@ -333,6 +373,10 @@ def simulate_DB(sents, kb, p_query, p_gate, g_query, g_gate, condition_num):
     ACC_collf_correct2 = 0
     ACC_collf_total2 = 0
     ACC_gate = 0
+    ACC_vallf_correct = 0
+    ACC_vallf_total = 0
+    ACC_vallf_correct2 = 0
+    ACC_vallf_total2 = 0
 
     kb_len = [0 for _ in range(30)]
 
@@ -344,32 +388,45 @@ def simulate_DB(sents, kb, p_query, p_gate, g_query, g_gate, condition_num):
         ACC_collf_correct, ACC_collf_total = ACC_collf(g_gate[i], p_gate[i], g_query[i], p_query[i], ACC_collf_correct, ACC_collf_total, 6)
         ACC_collf_correct2, ACC_collf_total2 = ACC_collf(g_gate[i], p_gate[i], g_query[i], p_query[i], ACC_collf_correct2, ACC_collf_total2, 12)
 
+        ACC_vallf_correct, ACC_vallf_total = ACC_valtotal(g_gate[i], p_gate[i], g_query[i], p_query[i], ACC_vallf_correct, ACC_vallf_total, 6)
+        ACC_vallf_correct2, ACC_vallf_total2 = ACC_valtotal(g_gate[i], p_gate[i], g_query[i], p_query[i], ACC_vallf_correct2, ACC_vallf_total2, 12)
+
         p_filtered_flight, p_total = MyDBMS(p_query[i], kb[i], condition_num)
         g_filtered_flight, g_total = MyDBMS(g_query[i], kb[i], condition_num)
 
+        p_filtered_flight2, p_total2 = MyDBMS(p_query[i], kb[i], 6)
+        g_filtered_flight2, g_total2 = MyDBMS(g_query[i], kb[i], 6)
+
         ACC_ex_correct, ACC_ex_total = ACC_ex(g_gate[i], p_gate[i], p_filtered_flight, g_filtered_flight, ACC_ex_correct, ACC_ex_total)
+        ACC_ex_correct2, ACC_ex_total2 = ACC_ex(g_gate[i], p_gate[i], p_filtered_flight2, g_filtered_flight2, ACC_ex_correct2, ACC_ex_total2)
         ACC_val_correct, ACC_val_total = ACC_val(g_gate[i], p_gate[i], g_query[i], p_query[i] ,ACC_val_correct, ACC_val_total) 
 
 
-    print('gate acc : ', ACC_gate , ' / ', total, ' -> ', 100.*ACC_gate /total)
-    print('Acc ex : ', 100.*ACC_ex_correct/ACC_ex_total, ACC_ex_correct, ACC_ex_total)
+    # print('gate acc : ', ACC_gate , ' / ', total, ' -> ', 100.*ACC_gate /total)
+    log_fp.write('col acc (6)   : ' + str(100.*ACC_collf_correct/ACC_collf_total) + ' -> ' + str(ACC_collf_correct) + ' / ' + str(ACC_collf_total) + '\n')
+    log_fp.write('val acc (6)   : ' + str(100.*ACC_vallf_correct/ACC_vallf_total) + ' -> ' + str(ACC_vallf_correct) + ' / ' + str(ACC_vallf_total) + '\n')
+    log_fp.write('Acc lf  (6)   : ' + str(100.*ACC_lf_correct[2][5]/ACC_lf_total[2]) + ' -> ' + str(ACC_lf_correct[2][5]) + ' / ' + str(ACC_lf_total[2]) + '\n')
+    log_fp.write('Acc ex  (6)   : ' + str(100.*ACC_ex_correct2/ACC_ex_total2) + ' -> ' + str(ACC_ex_correct2) + ' / ' + str(ACC_ex_total2) + '\n')
+
+    log_fp.write('col acc (12)  : ' + str(100.*ACC_collf_correct2/ACC_collf_total2) + ' -> ' + str(ACC_collf_correct2) + ' / ' + str(ACC_collf_total2) + '\n')
+    log_fp.write('val acc (12)  : ' + str(100.*ACC_vallf_correct2/ACC_vallf_total2) + ' -> ' + str(ACC_vallf_correct2) + ' / ' + str(ACC_vallf_total2) + '\n')
+    log_fp.write('Acc lf  (12)  : ' + str(100.*ACC_lf_correct[2][11]/ACC_lf_total[2]) + ' -> ' + str(ACC_lf_correct[2][11]) + ' / ' + str(ACC_lf_total[2]) + '\n')
+    log_fp.write('Acc_ex  (12)  : ' + str(100.*ACC_ex_correct/ACC_ex_total) + ' -> ' + str(ACC_ex_correct) + ' / ' + str(ACC_ex_total) + '\n')  
+
     condiction_name = ['departure_airport', 'return_airport', 'departure_month', 'return_month', 'departure_day', 'return_day', 'departure_time_num', 'return_time_num', 'class', \
                  'price', 'num_connections', 'airline_preference']
-    print('col acc 6 : ', ACC_collf_correct, ' / ', ACC_collf_total, ' -> ', 100.*ACC_collf_correct/ACC_collf_total)
-    print('col acc 12: ', ACC_collf_correct2, ' / ', ACC_collf_total2, ' -> ', 100.*ACC_collf_correct2/ACC_collf_total2)
-    for i in range(12):
-        print()
-        print('*'*100)
-        print(condiction_name[i], ' sql_val0 : ', ACC_val_correct[0][i], ' / ', ACC_val_total[0][i], ' -> ', 100.*ACC_val_correct[0][i]/ACC_val_total[0][i])
-        print(condiction_name[i], ' sql_val0 : ', ACC_val_correct[1][i], ' / ', ACC_val_total[1][i], ' -> ', 100.*ACC_val_correct[1][i]/ACC_val_total[1][i])
-        print(condiction_name[i], ' sql_val0 : ', ACC_val_correct[2][i], ' / ', ACC_val_total[2][i], ' -> ', 100.*ACC_val_correct[2][i]/ACC_val_total[2][i])
-        print('*'*100)
-        print(condiction_name[i], ' lf0    : ', ACC_lf_correct[0][i], ' / ', ACC_lf_total[0], ' -> ', 100.*ACC_lf_correct[0][i]/ACC_lf_total[0])
-        print(condiction_name[i], ' lf1    : ', ACC_lf_correct[1][i], ' / ', ACC_lf_total[1], ' -> ', 100.*ACC_lf_correct[1][i]/ACC_lf_total[1])
-        print(condiction_name[i], ' lf2    : ', ACC_lf_correct[2][i], ' / ', ACC_lf_total[2], ' -> ', 100.*ACC_lf_correct[2][i]/ACC_lf_total[2])
-        print()
-        
 
+    for i in range(12):
+        log_fp.write('\n')
+        log_fp.write('*'*100 + '\n')
+        # print(condiction_name[i], ' sql_val0 : ', ACC_val_correct[0][i], ' / ', ACC_val_total[0][i], ' -> ', 100.*ACC_val_correct[0][i]/ACC_val_total[0][i])
+        # print(condiction_name[i], ' sql_val0 : ', ACC_val_correct[1][i], ' / ', ACC_val_total[1][i], ' -> ', 100.*ACC_val_correct[1][i]/ACC_val_total[1][i])
+        log_fp.write(str(condiction_name[i]) + ' sql_val : ' + str(100.*ACC_val_correct[2][i]/ACC_val_total[2][i]) + ' -> ' + str(ACC_val_correct[2][i]) + ' / ' + str(ACC_val_total[2][i]) + '\n')
+        # print('*'*100)
+        # print(condiction_name[i], ' lf0    : ', ACC_lf_correct[0][i], ' / ', ACC_lf_total[0], ' -> ', 100.*ACC_lf_correct[0][i]/ACC_lf_total[0])
+        # print(condiction_name[i], ' lf1    : ', ACC_lf_correct[1][i], ' / ', ACC_lf_total[1], ' -> ', 100.*ACC_lf_correct[1][i]/ACC_lf_total[1])
+        # print(condiction_name[i], ' lf2    : ', ACC_lf_correct[2][i], ' / ', ACC_lf_total[2], ' -> ', 100.*ACC_lf_correct[2][i]/ACC_lf_total[2])
+        # print()
 
 # Read file
 sents, sents_len = tokenize_dialogue(data_file)
@@ -389,5 +446,5 @@ for i in range(len(predict_query)):
     sort_g_gate.append(g_gate[sort_indices_reverse[i]])
 
 # calculate accuracy
-simulate_DB(sents, kb_sents, sort_predict_query, sort_predict_gate, sort_g_query, sort_g_gate, 13)
+simulate_DB(sents, kb_sents, sort_predict_query, sort_predict_gate, sort_g_query, sort_g_gate, 12)
 print('End')

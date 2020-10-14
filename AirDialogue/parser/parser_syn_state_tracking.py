@@ -4,12 +4,15 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--dev', action='store_true', help='Use dev')
 parser.add_argument('--train', action='store_true', help='Use train')
 args = parser.parse_args()
+
 label_path = './synthesized_label/'
+if not os.path.exists('./synthesized_label/'):
+    os.makedirs('./synthesized_label/')
 
 if args.train:
 
     data_fp = open('../data/synthesized/tokenized/train/train.data', 'r')
-    fp = open('../data/synthesized/SQL/State_Tracking.txt', 'w')
+    fp = open('../data/synthesized/SQL/train/State_Tracking.txt', 'w')
     log_fp = open(label_path + 'train.status.log', 'w')
 
 elif args.dev:

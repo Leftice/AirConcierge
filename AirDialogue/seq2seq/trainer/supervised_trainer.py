@@ -313,8 +313,8 @@ class SupervisedTrainer(object):
 
                 progress_bar(batch_idx, len(dataloader), 'Loss: %.3f | Acc : %.1f%% (%d/%d) | %.1f%% (%d/%d) | %.1f%% |: %.1f%% |: %.1f%% |: %.1f%%'
                      % (train_loss / (batch_idx + 1), \
-                        100. * total_gp_correct[0] / total_gp[0], total_gp_correct[0], total_gp[0], \
-                        100. * total_gp_correct[1] / total_gp[1], total_gp_correct[1], total_gp[1], \
+                        100. * total_gp_correct[0] / (total_gp[0]+1), total_gp_correct[0], total_gp[0], \
+                        100. * total_gp_correct[1] / (total_gp[1]+1), total_gp_correct[1], total_gp[1], \
                         100. * correct_firstname / total, \
                         100. * correct_lastname / total, \
                         100. * correct_flight / (total), \
@@ -322,24 +322,24 @@ class SupervisedTrainer(object):
 
                 total_step += 1
 
-            print('STR : %.1f%% (%d/%d) |COL_NUM : %.1f%% (%d/%d) |COL : %.1f%% (%d/%d) |OP : %.1f%% (%d/%d) |GATE : %.1f%% (%d/%d)'
-                            % ( 100. * correct_str / total_str, correct_str, total_str, \
-                                100. * correct_num / total_num, correct_num, total_num, \
-                                100. * correct_col / total_col, correct_col, total_col, \
-                                100. * correct_op / total_op, correct_op, total_op, \
-                                100. * correct_gate / total_gate, correct_gate, total_gate))
-            print('num', 100. * correct_num / total_num)
-            print('col', 100. * correct_col / total_col)
-            print('op' , 100. * correct_op  / total_op )
-            print('str', 100. * correct_str / total_str)
-            print('gate', 100. * correct_gate / total_gate)
-            for c in range(11):    
-                print(str_name[c], 100. * correct_str_each[c] / total_str_each[c], correct_str_each[c], total_str_each[c])
-            print('Gate : ', total_gate_match, ' : ', 100.*total_gate_match[0]/total_gate_match[1])
-            print('Query : ', total_query_match, ' : ', 100.*total_query_match[0]/total_query_match[1])
-            print('Full Query : ', full_query_match, ' : ', 100.*full_query_match[0]/full_query_match[1])
-            for c in range(12):
-                print('condiction : ', c, 'ACC_lf_correct : ', 100.*total_ACC_lf_correct[c] / total_truth_gate_num, total_ACC_lf_correct[c], total_truth_gate_num)
+            # print('STR : %.1f%% (%d/%d) |COL_NUM : %.1f%% (%d/%d) |COL : %.1f%% (%d/%d) |OP : %.1f%% (%d/%d) |GATE : %.1f%% (%d/%d)'
+            #                 % ( 100. * correct_str / total_str, correct_str, total_str, \
+            #                     100. * correct_num / total_num, correct_num, total_num, \
+            #                     100. * correct_col / total_col, correct_col, total_col, \
+            #                     100. * correct_op / total_op, correct_op, total_op, \
+            #                     100. * correct_gate / total_gate, correct_gate, total_gate))
+            # print('num', 100. * correct_num / total_num)
+            # print('col', 100. * correct_col / total_col)
+            # print('op' , 100. * correct_op  / total_op )
+            # print('str', 100. * correct_str / total_str)
+            # print('gate', 100. * correct_gate / total_gate)
+            # for c in range(11):    
+            #     print(str_name[c], 100. * correct_str_each[c] / total_str_each[c], correct_str_each[c], total_str_each[c])
+            # print('Gate : ', total_gate_match, ' : ', 100.*total_gate_match[0]/total_gate_match[1])
+            # print('Query : ', total_query_match, ' : ', 100.*total_query_match[0]/total_query_match[1])
+            # print('Full Query : ', full_query_match, ' : ', 100.*full_query_match[0]/full_query_match[1])
+            # for c in range(12):
+            #     print('condiction : ', c, 'ACC_lf_correct : ', 100.*total_ACC_lf_correct[c] / total_truth_gate_num, total_ACC_lf_correct[c], total_truth_gate_num)
             print('End eval')
 
     def train(self, args, model, dataloader, scheduler, num_epochs=5,
