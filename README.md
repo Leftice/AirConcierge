@@ -130,7 +130,6 @@ The implementation of seq2seq model is adapted from the [pytorch-seq2seq](https:
 				--State_Tracking.txt
 				--train_tok.jsonl
 				--train_tok.tables.jsonl
-				
 			--train
 				--filtered_kb
 				--State_Tracking.txt

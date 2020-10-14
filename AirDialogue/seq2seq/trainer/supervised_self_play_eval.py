@@ -53,9 +53,9 @@ class SupervisedSelfPlayEval(object):
     def _test_epoches_t1t2_self_play_eval(self, dataloader, model, start_step, save_dir='runs/exp', args=None):
 
         if args.syn:
-            data_path = 'results/synthesized/'
+            data_path = './results/synthesized/'
         elif args.air:
-            data_path = 'results/airdialogue/'
+            data_path = './results/airdialogue/'
         else:
             print('Pleae use --syn or --air !')
             raise

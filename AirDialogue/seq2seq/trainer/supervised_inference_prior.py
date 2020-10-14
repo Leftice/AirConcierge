@@ -59,9 +59,9 @@ class SupervisedInferencePrior(object):
         # teacher_fp = open('Inference_Bleu/t1t2/dev_inference_out_teacher.txt', 'w')
 
         if args.syn:
-            data_path = 'results/synthesized/'
+            data_path = './results/synthesized/'
         elif args.air:
-            data_path = 'results/airdialogue/'
+            data_path = './results/airdialogue/'
         else:
             print('Pleae use --syn or --air !')
             raise
