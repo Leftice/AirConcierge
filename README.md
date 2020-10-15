@@ -27,7 +27,7 @@ with KBs using the generated SQL queries. Specifically, the neural agent first l
 ## 1. Prepare Dataset
 The download of the AirDialogue dataset, meta data and the pre-processing steps can refer to the [official link](https://github.com/google/airdialogue_model). Since the official [pre-processing code](https://github.com/google/airdialogue) and steps may have some little changes, you can also download from the URL provided [here](https://drive.google.com/file/d/1rtKhWK4Ca-VBi2gRqEpjuJma_DMjP6W_/view?usp=sharing). The pre-processing steps are the same as provided by the official, but the older version. After downloading the code, you can also use the download script to download the data. (We recommend that you use this option to save time)
 ```	
-	bash download.sh
+bash download.sh
 ```
 ## 2. Preprocessing
 We preprocess the dataset in order to begin the training and measure the performance of our model. 
@@ -37,7 +37,7 @@ For AirDialogue dataset, please use script command :
 ```
 For Synthesized dataset, please use script command :
 ```
-	bash processing_data.sh air
+	bash processing_data.sh syn
 ```
 
 ## 3. Training
@@ -45,7 +45,7 @@ For Synthesized dataset, please use script command :
 #### Supervised Learning
 The fist step is to train our model using supervised learning.
 ```	
-	CUDA_VISIBLE_DEVICES=0 python air.py --air --save_dir 'runs/AirConciergeSQL-epoch5/' --model_dir 'checkpoints/AirConciergeSQL-epoch5/' --checkpoint_every 2000 --adam --action_att --clip 1.0 --batch_size 32 --max_len 320 --mask --sigmkb --shuffle --sql
+CUDA_VISIBLE_DEVICES=0 python air.py --air --save_dir 'runs/AirConciergeSQL-epoch5/' --model_dir 'checkpoints/AirConciergeSQL-epoch5/' --checkpoint_every 2000 --adam --action_att --clip 1.0 --batch_size 32 --max_len 320 --mask --sigmkb --shuffle --sql
 ```	
 #### Examine Training Meta Information
 Training meta data will be written to the output directory, which can be examined using `tensorboard`. The following command will examine the training procedure of the supervised learning model.
@@ -103,11 +103,11 @@ The fourth step generates predictive self-play files by running our model on dev
 ```
 
 ```	
-	python3 utils/self_play_simulate_DB.py --air --self_play_dev
+python3 utils/self_play_simulate_DB.py --air --self_play_dev
 ```
 
 ```	
-	CUDA_VISIBLE_DEVICES=0 python air.py --air --save_dir 'runs/AirConciergeSQL-epoch5/' --model_dir 'checkpoints/AirConciergeSQL-epoch5/' --checkpoint_every 2000 --adam --action_att --clip 1.0 --batch_size 1 --max_len 320 --mask --sigmkb --sql --resume --dev --self_play_eval
+CUDA_VISIBLE_DEVICES=0 python air.py --air --save_dir 'runs/AirConciergeSQL-epoch5/' --model_dir 'checkpoints/AirConciergeSQL-epoch5/' --checkpoint_every 2000 --adam --action_att --clip 1.0 --batch_size 1 --max_len 320 --mask --sigmkb --sql --resume --dev --self_play_eval
 ```
 
 ## Citation
