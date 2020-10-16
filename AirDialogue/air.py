@@ -168,6 +168,19 @@ parser.add_argument('--init', type=str, default='mos')
 parser.add_argument('--syn', action='store_true', help='Use syn')
 parser.add_argument('--air', action='store_true', help='Use air')
 
+def cp_file(model_dir, args):
+    model_dir = model_dir + 'file_backup/'
+    if not os.path.exists(model_dir):
+        os.makedirs(model_dir)
+    file_name = [' air.py ', ' dataloader.py ', ' seq2seq ']
+    for file in file_name:
+        cmd = 'cp -r' + file + model_dir
+        print(cmd)
+        os.system(cmd)
+    with open('args.txt', 'w') as f:
+        json.dump(args.__dict__, f, indent=2)
+        os.system('mv args.txt ' + model_dir)
+
 # parameter setting
 args = parser.parse_args()
 
@@ -176,6 +189,10 @@ random.seed(seed)
 torch.manual_seed(seed)
 torch.cuda.manual_seed(seed)
 np.random.seed(seed)
+
+if args.eval == False :
+    print('cp file ... ', args.model_dir)
+    cp_file(args.model_dir,args)
 
 # torch.backends.cudnn.deterministic=True
 # # If you don't need to reproduce 100% the same results of a certain seed, 
@@ -251,7 +268,7 @@ else:
     print('default init !')
 
 total_parameter = sum(p.numel() for p in seq2seq.parameters() if p.requires_grad)
-# print('Total parameter : ', total_parameter)
+print('Total parameter : ', total_parameter)
 
 # optimizer
 if args.adam:
