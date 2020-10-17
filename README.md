@@ -22,7 +22,7 @@ in solving a specific task while holding conversations with human, the agent nee
 * tensorboard 1.14.0
 * tensorboardX 1.9
 * torchtext 0.4.0
-* argparse, wget, tqdm
+* argparse, wget, tqdm <br>
 You can also set up the environment with the docker file we provided, it has created most of the required package libraries, but you may need to make minor modifications to add some missing packages. You can refer to the following [link](https://github.com/stevenokm/airdialogue-187) to get the detailed steps of the creation. Thanks to [steven](https://github.com/stevenokm/) for providing it.
 
 ## 1. Prepare Dataset
