@@ -53,7 +53,7 @@ For Synthesized dataset, please use the script command :
 ```
 bash run_syn.sh
 ```
-If you want to know the purpose of each instruction in the script and execute it separately, you can refer to 3. (Training) and 4. (Evaluating on the AirDialogue dev set).
+If you want to know the purpose of each instruction in the script and execute it separately, you can refer to 3. (Training) and 4. (Evaluating on the AirDialogue dev set). All experimental results can be found in the ./results folder after running the commands.
 
 ## 3. Training
 
