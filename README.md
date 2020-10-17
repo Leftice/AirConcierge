@@ -18,10 +18,11 @@ in solving a specific task while holding conversations with human, the agent nee
 * Cuda compilation tools, release 10.0
 * Python 2.7.12
 * Pytorch 1.3.1+cu100
-* tensorflow (tested on 1.15.0, used in evaluator)
+* tensorflow-gpu (tested on 1.14.0, used in evaluator)
 * tensorboard 1.14.0
 * tensorboardX 1.9
 * torchtext 0.4.0
+* argparse, wget, tqdm
 
 ## 1. Prepare Dataset
 The download of the AirDialogue dataset, meta data and the pre-processing steps can refer to the [official link](https://github.com/google/airdialogue_model). Since the official [pre-processing code](https://github.com/google/airdialogue) and steps may have some little changes, you can also download from the URL provided [here](https://drive.google.com/file/d/1rtKhWK4Ca-VBi2gRqEpjuJma_DMjP6W_/view?usp=sharing). The pre-processing steps are the same as provided by the official, but the older version. You can also use the download script to download the data. (We recommend that you use this option to save time.)
@@ -134,4 +135,4 @@ If you find this work useful in your research, please cite:
 ```
 
 ## Acknowledgement
-The implementation of seq2seq model is adapted from the [pytorch-seq2seq](https://github.com/IBM/pytorch-seq2seq) repository by [IBM](https://github.com/IBM). The code implementation of text-to-SQL refers to [SQLNet](https://github.com/xiaojunxu/SQLNet) repository by [xiaojunxu](https://github.com/xiaojunxu)
+The implementation of seq2seq model is adapted from the [pytorch-seq2seq](https://github.com/IBM/pytorch-seq2seq) repository by [IBM](https://github.com/IBM). The code implementation of text-to-SQL refers to [SQLNet](https://github.com/xiaojunxu/SQLNet) repository by [xiaojunxu](https://github.com/xiaojunxu).
