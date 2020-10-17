@@ -195,7 +195,7 @@ class Seq2seq(nn.Module):
         concat1_embedded = self.encoder_input_projection1(concat1)
         concat1_padded_embedded = nn.utils.rnn.pack_padded_sequence(concat1_embedded, size_dialogue, batch_first=True)
         encoder_outputs1, encoder_state1 = self._build_encoder1(concat1_padded_embedded)
-        encoder_outputs1, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs1, batch_first=True, max_seq_len=max_seq_len)
+        encoder_outputs1, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs1, batch_first=True)
         encoder_outputs1 = encoder_outputs1 + concat1_embedded
 
         # decoder 1
@@ -228,12 +228,12 @@ class Seq2seq(nn.Module):
             sql_concat2_embedded = self.sql_encoder_input_projection2(encoder_emb_inp) 
             sql_encoder_emb_inp_padded = nn.utils.rnn.pack_padded_sequence(sql_concat2_embedded, size_dialogue, batch_first=True)
             sql_encoder_outputs2, sql_encoder_state2 = self._build_encoder2(sql_encoder_emb_inp_padded)
-            sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True, max_seq_len=max_seq_len)
+            sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True)
             encoder_outputs2_without_kb = sql_encoder_outputs2
             sql_concat2_embedded_2 = self.sql_encoder_input_projection2_2(encoder_emb_inp) 
             sql_encoder_emb_inp_padded_2 = nn.utils.rnn.pack_padded_sequence(sql_concat2_embedded_2, size_dialogue, batch_first=True)
             sql_encoder_outputs2_2, sql_encoder_state2_2 = self._build_encoder2(sql_encoder_emb_inp_padded_2)
-            sql_encoder_outputs2_2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2_2, batch_first=True, max_seq_len=max_seq_len)
+            sql_encoder_outputs2_2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2_2, batch_first=True)
             encoder_outputs2_without_kb_2 = sql_encoder_outputs2_2
 
             # SQLNet
@@ -300,7 +300,7 @@ class Seq2seq(nn.Module):
         concat2_embedded = self.encoder_input_projection2(concat2)
         encoder_emb_inp_padded = nn.utils.rnn.pack_padded_sequence(concat2_embedded, size_dialogue, batch_first=True)
         encoder_outputs2, encoder_state2 = self._build_encoder2(encoder_emb_inp_padded)
-        encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs2, batch_first=True, max_seq_len=max_seq_len)
+        encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs2, batch_first=True)
         encoder_outputs2_concat = encoder_outputs2
 
         # encoder2_kb
@@ -445,12 +445,12 @@ class Seq2seq(nn.Module):
             sql_concat2_embedded = self.sql_encoder_input_projection2(encoder_emb_inp) 
             sql_encoder_emb_inp_padded = nn.utils.rnn.pack_padded_sequence(sql_concat2_embedded, size_dialogue, batch_first=True)
             sql_encoder_outputs2, sql_encoder_state2 = self._build_encoder2(sql_encoder_emb_inp_padded)
-            sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True, max_seq_len=max_seq_len)
+            sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True)
             encoder_outputs2_without_kb = sql_encoder_outputs2
             sql_concat2_embedded_2 = self.sql_encoder_input_projection2_2(encoder_emb_inp) 
             sql_encoder_emb_inp_padded_2 = nn.utils.rnn.pack_padded_sequence(sql_concat2_embedded_2, size_dialogue, batch_first=True)
             sql_encoder_outputs2_2, sql_encoder_state2_2 = self._build_encoder2(sql_encoder_emb_inp_padded_2)
-            sql_encoder_outputs2_2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2_2, batch_first=True, max_seq_len=max_seq_len)
+            sql_encoder_outputs2_2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2_2, batch_first=True)
             encoder_outputs2_without_kb_2 = sql_encoder_outputs2_2
 
             # SQLNet
@@ -537,7 +537,7 @@ class Seq2seq(nn.Module):
         concat1_embedded = self.encoder_input_projection1(concat1)
         concat1_padded_embedded = nn.utils.rnn.pack_padded_sequence(concat1_embedded, size_dialogue, batch_first=True)
         encoder_outputs1, encoder_state1 = self._build_encoder1(concat1_padded_embedded)
-        encoder_outputs1, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs1, batch_first=True, max_seq_len=max_seq_len)
+        encoder_outputs1, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs1, batch_first=True)
         encoder_outputs1 = encoder_outputs1 + concat1_embedded
 
         ################################################################
@@ -587,7 +587,7 @@ class Seq2seq(nn.Module):
             sql_concat2_embedded = self.sql_encoder_input_projection2(encoder_emb_inp) 
             sql_encoder_emb_inp_padded = nn.utils.rnn.pack_padded_sequence(sql_concat2_embedded, size_dialogue, batch_first=True)
             sql_encoder_outputs2, sql_encoder_state2 = self._build_encoder2(sql_encoder_emb_inp_padded)
-            sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True, max_seq_len=max_seq_len)
+            sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True)
             encoder_outputs2_without_kb = sql_encoder_outputs2
 
             # Predict when to send query
@@ -616,7 +616,7 @@ class Seq2seq(nn.Module):
         concat2_embedded = self.encoder_input_projection2(concat2)
         encoder_emb_inp_padded = nn.utils.rnn.pack_padded_sequence(concat2_embedded, size_dialogue, batch_first=True)
         encoder_outputs2, encoder_state2 = self._build_encoder2(encoder_emb_inp_padded)
-        encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs2, batch_first=True, max_seq_len=max_seq_len)
+        encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs2, batch_first=True)
         encoder_outputs2_concat = encoder_outputs2
 
         ################################################################
@@ -673,7 +673,7 @@ class Seq2seq(nn.Module):
         concat1_embedded = self.encoder_input_projection1(concat1)
         concat1_padded_embedded = nn.utils.rnn.pack_padded_sequence(concat1_embedded, size_dialogue, batch_first=True)
         encoder_outputs1, encoder_state1 = self._build_encoder1(concat1_padded_embedded)
-        encoder_outputs1, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs1, batch_first=True, max_seq_len=max_seq_len)
+        encoder_outputs1, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs1, batch_first=True)
         encoder_outputs1 = encoder_outputs1 + concat1_embedded
 
         ################################################################
@@ -722,12 +722,12 @@ class Seq2seq(nn.Module):
             sql_concat2_embedded = self.sql_encoder_input_projection2(encoder_emb_inp) 
             sql_encoder_emb_inp_padded = nn.utils.rnn.pack_padded_sequence(sql_concat2_embedded, size_dialogue, batch_first=True)
             sql_encoder_outputs2, sql_encoder_state2 = self._build_encoder2(sql_encoder_emb_inp_padded)
-            sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True, max_seq_len=max_seq_len)
+            sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True)
             encoder_outputs2_without_kb = sql_encoder_outputs2
             sql_concat2_embedded_2 = self.sql_encoder_input_projection2_2(encoder_emb_inp) 
             sql_encoder_emb_inp_padded_2 = nn.utils.rnn.pack_padded_sequence(sql_concat2_embedded_2, size_dialogue, batch_first=True)
             sql_encoder_outputs2_2, sql_encoder_state2_2 = self._build_encoder2(sql_encoder_emb_inp_padded_2)
-            sql_encoder_outputs2_2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2_2, batch_first=True, max_seq_len=max_seq_len)
+            sql_encoder_outputs2_2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2_2, batch_first=True)
             encoder_outputs2_without_kb_2 = sql_encoder_outputs2_2
 
             # Predict when to send query
@@ -814,7 +814,7 @@ class Seq2seq(nn.Module):
         concat2_embedded = self.encoder_input_projection2(concat2)
         encoder_emb_inp_padded = nn.utils.rnn.pack_padded_sequence(concat2_embedded, size_dialogue, batch_first=True)
         encoder_outputs2, encoder_state2 = self._build_encoder2(encoder_emb_inp_padded)
-        encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs2, batch_first=True, max_seq_len=max_seq_len)
+        encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs2, batch_first=True)
         encoder_outputs2_concat = encoder_outputs2
 
         embedded_eval = None
@@ -858,7 +858,7 @@ class Seq2seq(nn.Module):
         sql_concat2_embedded = self.sql_encoder_input_projection2(encoder_emb_inp) 
         sql_encoder_emb_inp_padded = nn.utils.rnn.pack_padded_sequence(sql_concat2_embedded, size_dialogue, batch_first=True)
         sql_encoder_outputs2, sql_encoder_state2 = self._build_encoder2(sql_encoder_emb_inp_padded)
-        sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True, max_seq_len=max_seq_len)
+        sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True)
         encoder_outputs2_without_kb = sql_encoder_outputs2
 
         # Predict when to send query
@@ -904,7 +904,7 @@ class Seq2seq(nn.Module):
             sql_concat2_embedded = self.sql_encoder_input_projection2(encoder_emb_inp) 
             sql_encoder_emb_inp_padded = nn.utils.rnn.pack_padded_sequence(sql_concat2_embedded, size_dialogue, batch_first=True)
             sql_encoder_outputs2, sql_encoder_state2 = self._build_encoder2(sql_encoder_emb_inp_padded)
-            sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True, max_seq_len=max_seq_len)
+            sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True)
             encoder_outputs2_without_kb = sql_encoder_outputs2
 
             # Predict when to send query
@@ -928,7 +928,7 @@ class Seq2seq(nn.Module):
         concat2_embedded = self.encoder_input_projection2(concat2)
         encoder_emb_inp_padded = nn.utils.rnn.pack_padded_sequence(concat2_embedded, size_dialogue, batch_first=True)
         encoder_outputs2, encoder_state2 = self._build_encoder2(encoder_emb_inp_padded)
-        encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs2, batch_first=True, max_seq_len=max_seq_len)
+        encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs2, batch_first=True)
         encoder_outputs2_concat = encoder_outputs2
 
         ################################################################
@@ -987,7 +987,7 @@ class Seq2seq(nn.Module):
             sql_concat2_embedded = self.sql_encoder_input_projection2(encoder_emb_inp) 
             sql_encoder_emb_inp_padded = nn.utils.rnn.pack_padded_sequence(sql_concat2_embedded, size_dialogue, batch_first=True)
             sql_encoder_outputs2, sql_encoder_state2 = self._build_encoder2(sql_encoder_emb_inp_padded)
-            sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True, max_seq_len=max_seq_len)
+            sql_encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(sql_encoder_outputs2, batch_first=True)
             encoder_outputs2_without_kb = sql_encoder_outputs2
 
             # Predict when to send query
@@ -1013,7 +1013,7 @@ class Seq2seq(nn.Module):
         concat2_embedded = self.encoder_input_projection2(concat2)
         encoder_emb_inp_padded = nn.utils.rnn.pack_padded_sequence(concat2_embedded, size_dialogue, batch_first=True)
         encoder_outputs2, encoder_state2 = self._build_encoder2(encoder_emb_inp_padded)
-        encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs2, batch_first=True, max_seq_len=max_seq_len)
+        encoder_outputs2, _ = nn.utils.rnn.pad_packed_sequence(encoder_outputs2, batch_first=True)
         encoder_outputs2_concat = encoder_outputs2
 
         # decoder 2

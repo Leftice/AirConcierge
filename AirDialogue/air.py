@@ -20,7 +20,6 @@ from dataloader import *
 import torch.backends.cudnn as cudnn
 import random
 import torch.nn as nn
-import os
 import json
 
 try:
