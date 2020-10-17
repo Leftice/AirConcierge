@@ -119,7 +119,7 @@ parser.add_argument('--decay_steps', type=int, default=20000, help='How frequent
 parser.add_argument('--decay_factor', type=float, default=0.1, help='How much we decay.')
 parser.add_argument('--num_train_steps', type=int, default=12000, help='Num steps to train.')
 
-parser.add_argument('--save_dir', default='runs/exp', type=str, help='save_dir')
+parser.add_argument('--save_dir', default='runs/exp/', type=str, help='save_dir')
 parser.add_argument('--model_dir', default='checkpoints/', type=str, help='model_dir')
 parser.add_argument('--print_every', default=100, type=int, help='print_every')
 parser.add_argument('--checkpoint_every', default=100, type=int, help='checkpoint_every')
@@ -171,7 +171,7 @@ def cp_file(model_dir, args):
     model_dir = model_dir + 'file_backup/'
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
-    file_name = [' air.py ', ' dataloader.py ', ' seq2seq ']
+    file_name = [' air.py ', ' dataloader ', ' seq2seq ']
     for file in file_name:
         cmd = 'cp -r' + file + model_dir
         print(cmd)
@@ -189,9 +189,9 @@ torch.manual_seed(seed)
 torch.cuda.manual_seed(seed)
 np.random.seed(seed)
 
-if args.eval == False :
-    print('cp file ... ', args.model_dir)
-    cp_file(args.model_dir,args)
+if args.eval == False and args.resume == False:
+    print('cp file ... ', args.save_dir)
+    cp_file(args.save_dir,args)
 
 # torch.backends.cudnn.deterministic=True
 # # If you don't need to reproduce 100% the same results of a certain seed, 
