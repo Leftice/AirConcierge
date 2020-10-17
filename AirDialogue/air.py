@@ -267,7 +267,6 @@ else:
     print('default init !')
 
 total_parameter = sum(p.numel() for p in seq2seq.parameters() if p.requires_grad)
-print('Total parameter : ', total_parameter)
 
 # optimizer
 if args.adam:
