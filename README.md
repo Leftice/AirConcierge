@@ -50,7 +50,7 @@ For Synthesized dataset, please use script command :
 ```
 bash run_syn.sh
 ```
-If you want to know the purpose of each instruction and execute it separately, you can refer to 3. (Training) and 4. (Evaluating on the AirDialogue dev set).
+If you want to know the purpose of each instruction in the script and execute it separately, you can refer to 3. (Training) and 4. (Evaluating on the AirDialogue dev set).
 
 ## 3. Training
 
