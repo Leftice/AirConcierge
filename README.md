@@ -7,7 +7,7 @@ This repository contains the PyTorch implementation of text-to-SQL guided dialog
 
 > _AirConcierge: Generating Task-Oriented Dialogue via Efficient Large-Scale Knowledge Retrieval_. <br>
 **Chieh-Yang Chen**, Pei-Hsin Wang, Shih-Chieh Chang, Da-Cheng Juan, Wei Wei, Jia-Yu Pan. <br>
-Link : Will be added when "Findings of EMNLP (2020)" is released on ACL anthology
+Link : https://www.aclweb.org/anthology/2020.findings-emnlp.79/
 
 ## Introduction
 The task-oriented dialogue system is a rapidly growing field with many practical applications, attracting more and more research attention recently. In order to assist users
